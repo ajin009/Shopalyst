@@ -23,9 +23,6 @@ The architecture includes an internet-facing Application Load Balancer (ALB), Au
 - AWS Secrets Manager
 - Amazon CloudWatch monitoring
 
-**Traffic Flow:**
-
-Internet → Application Load Balancer → EC2 Auto Scaling Group → Amazon RDS PostgreSQL
 
 ## Infrastructure Implementation
 
@@ -39,9 +36,6 @@ Configured a custom VPC spanning two Availability Zones to provide high availabi
 - Configured NAT Gateway routing for private subnet outbound connectivity.
 - Configured route tables and subnet associations.
 
-![AWS VPC](screenshots/vpc.png)
-
-![Route Tables](screenshots/route-tables.png)
 
 ### 2. Application Load Balancer and Auto Scaling
 
@@ -66,8 +60,6 @@ Provisioned an Amazon RDS PostgreSQL database with the following configurations:
 - Restricted database connectivity through security groups
 - Database credentials managed securely using AWS Secrets Manager
 
-![Amazon RDS](screenshots/rds.png)
-
 ### 4. Security Configuration
 
 Implemented three security groups to enforce controlled communication between infrastructure components.
@@ -80,13 +72,11 @@ Implemented three security groups to enforce controlled communication between in
 
 EC2 instances are deployed in private subnets without direct public SSH access.
 
-![Security Group](screenshots/security-group.png)
 
 ### 5. Secrets Management
 
 Used AWS Secrets Manager to securely manage database credentials, avoiding hardcoded database passwords in Terraform configuration and EC2 user data.
 
-![AWS Secrets Manager](screenshots/secrets-manager.png)
 
 ### 6. EC2 User Data Configuration
 
@@ -150,14 +140,6 @@ The infrastructure was reviewed through the AWS Management Console, including:
 - AWS Secrets Manager configuration
 - RDS PostgreSQL deployment
 
-## Security Best Practices
-
-- EC2 instances hosted in private subnets
-- Database not publicly accessible
-- Security group rules restricting traffic between tiers
-- Database credentials managed through AWS Secrets Manager
-- IAM-based access management
-- Infrastructure managed using Terraform
 
 ## Conclusion
 

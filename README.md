@@ -1,4 +1,3 @@
-# Shopalyst
 # AWS Highly Available Infrastructure Deployment Using Terraform
 
 ## Project Overview

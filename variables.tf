@@ -3,19 +3,19 @@ variable "aws_region" {
 }
 
 variable "vpc_cidr" {
-  default = "10.0.0.0/16"
+  default = "10.0.0.0/22"
 }
 
 variable "public_subnets" {
-  default = ["10.0.1.0/24", "10.0.2.0/24"]
+  default = ["10.0.0.0/27", "10.0.0.32/27"]
 }
 
 variable "private_subnets" {
-  default = ["10.0.3.0/24", "10.0.4.0/24"]
+  default = ["10.0.0.64/26", "10.0.0.128/26"]
 }
 
 variable "db_subnets" {
-  default = ["10.0.5.0/24", "10.0.6.0/24"]
+  default = ["10.0.0.192/24", "10.0.0.224/24"]
 }
 
 variable "instance_type" {

@@ -1,4 +1,4 @@
-# AWS Highly Available Infrastructure Deployment Using Terraform
+# AWS Infrastructure Deployment with IaC
 
 ## Project Overview
 
@@ -103,13 +103,6 @@ Initialize Terraform:
 terraform init
 ```
 
-Validate the configuration:
-
-```bash
-terraform fmt -check
-terraform validate
-```
-
 Review the infrastructure deployment plan:
 
 ```bash
@@ -127,20 +120,6 @@ Destroy the infrastructure when no longer required:
 ```bash
 terraform destroy
 ```
-
-## Validation
-
-The infrastructure was reviewed through the AWS Management Console, including:
-
-- VPC and subnet configuration
-- Route table associations
-- CloudWatch CPU utilization alarms
-- ALB target group registration and health status
-- Security group inbound rules
-- AWS Secrets Manager configuration
-- RDS PostgreSQL deployment
-
-
 ## Conclusion
 
 This project demonstrates the implementation of a scalable, secure, and highly available AWS infrastructure using Terraform. It incorporates network isolation, application load balancing, automatic scaling, managed database services, and security controls to support reliable application hosting.

@@ -46,10 +46,6 @@ Implemented an internet-facing Application Load Balancer to distribute incoming 
 - Configured Auto Scaling based on CPU utilization.
 - Integrated Amazon CloudWatch alarms for monitoring.
 
-![CloudWatch CPU Alarm](screenshots/cloudwatch-alarm.png)
-
-![ALB Target Group](screenshots/alb-target-group.png)
-
 ### 3. Amazon RDS PostgreSQL
 
 Provisioned an Amazon RDS PostgreSQL database with the following configurations:
